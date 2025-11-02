@@ -1,0 +1,171 @@
+================================================================================
+PORTFOLIO STRATEGIES COMPREHENSIVE COMPARISON REPORT
+================================================================================
+
+Generated: 2025-10-30 01:41:05
+Number of Strategies: 3
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+ BEST SHARPE RATIO: Classical Portfolio (Run 1)
+   → Sharpe: 1.975
+   → Return: 58.74%
+   → Volatility: 29.75%
+
+ HIGHEST RETURN: Classical Portfolio (Run 1)
+   → Return: 58.74%
+   → Final Value: $157,870
+
+ BEST RISK MANAGEMENT: Classical Portfolio (Run 1)
+   → Max Drawdown: 22.01%
+   → Calmar Ratio: 2.669
+
+ HIGHEST FINAL VALUE: Classical Portfolio (Run 1)
+   → Final Value: $157,870
+   → Net Profit: $57,870
+
+================================================================================
+DETAILED PERFORMANCE METRICS
+================================================================================
+
+--------------------------------------------------------------------------------
+Quantum Portfolio (Quantum)
+--------------------------------------------------------------------------------
+Assets: 5 (Effective N: 5.27)
+
+RETURNS:
+  Final Value:          $152,747
+  Total Return:         52.75%
+  Annualized Return:    52.75%
+
+RISK METRICS:
+  Volatility:           31.81%
+  Maximum Drawdown:     27.61%
+  VaR (95%):            2.98%
+
+RISK-ADJUSTED:
+  Sharpe Ratio:         1.658
+  Sortino Ratio:        2.256
+  Calmar Ratio:         1.910
+
+TRADING:
+  Win Rate:             56.2%
+  Best Day:             12.93%
+  Worst Day:            -7.69%
+  Rebalances:           1
+  Total Costs:          $616.59 (0.62%)
+
+CONCENTRATION:
+  HHI:                  0.1897
+  Max Weight:           27.97%
+  Min Weight:           1.00%
+
+--------------------------------------------------------------------------------
+Classical Portfolio (Run 1) (Classical)
+--------------------------------------------------------------------------------
+Assets: 15 (Effective N: 3.76)
+
+RETURNS:
+  Final Value:          $157,870
+  Total Return:         57.87%
+  Annualized Return:    58.74%
+
+RISK METRICS:
+  Volatility:           29.75%
+  Maximum Drawdown:     22.01%
+  VaR (95%):            2.28%
+
+RISK-ADJUSTED:
+  Sharpe Ratio:         1.975
+  Sortino Ratio:        2.886
+  Calmar Ratio:         2.669
+
+TRADING:
+  Win Rate:             59.0%
+  Best Day:             11.65%
+  Worst Day:            -6.87%
+  Rebalances:           3
+  Total Costs:          $3,417.79 (3.42%)
+
+CONCENTRATION:
+  HHI:                  0.2661
+  Max Weight:           40.00%
+  Min Weight:           1.00%
+
+--------------------------------------------------------------------------------
+Classical Portfolio (Run 2) (Classical)
+--------------------------------------------------------------------------------
+Assets: 15 (Effective N: 5.27)
+
+RETURNS:
+  Final Value:          $151,978
+  Total Return:         51.98%
+  Annualized Return:    52.75%
+
+RISK METRICS:
+  Volatility:           31.81%
+  Maximum Drawdown:     27.61%
+  VaR (95%):            2.98%
+
+RISK-ADJUSTED:
+  Sharpe Ratio:         1.658
+  Sortino Ratio:        2.256
+  Calmar Ratio:         1.910
+
+TRADING:
+  Win Rate:             56.2%
+  Best Day:             12.93%
+  Worst Day:            -7.69%
+  Rebalances:           1
+  Total Costs:          $616.59 (0.62%)
+
+CONCENTRATION:
+  HHI:                  0.1897
+  Max Weight:           27.97%
+  Min Weight:           1.00%
+
+================================================================================
+BENCHMARK COMPARISON
+================================================================================
+
+Equal Weight (All):
+  Return:     15.22%
+  Volatility: 16.33%
+  Sharpe:     0.932
+  Max DD:     25.00%
+
+Minimum Variance:
+  Return:     12.98%
+  Volatility: 11.70%
+  Sharpe:     1.110
+  Max DD:     18.00%
+
+Maximum Sharpe:
+  Return:     18.80%
+  Volatility: 13.73%
+  Sharpe:     1.369
+  Max DD:     22.00%
+
+================================================================================
+RELATIVE PERFORMANCE vs BENCHMARKS
+================================================================================
+
+Quantum Portfolio: OUTPERFORMS by 21.1%
+
+Classical Portfolio (Run 1): OUTPERFORMS by 44.2%
+
+Classical Portfolio (Run 2): OUTPERFORMS by 21.1%
+
+================================================================================
+KEY INSIGHTS
+================================================================================
+
+✓ LOW VARIANCE in Sharpe ratios - strategies perform similarly on risk-adjusted basis
+
+ SIGNIFICANT COST DIFFERENCE: Classical Portfolio (Run 1) has 5.5x higher costs
+
+================================================================================
+END OF REPORT
+================================================================================

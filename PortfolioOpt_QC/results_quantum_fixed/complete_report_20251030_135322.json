@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-10-30T14:00:28.626925",
+  "version": "2.5_FIXED",
+  "configuration": {
+    "capital": 100000.0,
+    "n_assets": 15,
+    "risk_aversion": 0.5,
+    "use_quantum": false,
+    "num_reads": null,
+    "annealing_time": null,
+    "penalty_strength": null,
+    "chain_strength": null
+  },
+  "portfolio": {
+    "tickers": [
+      "NVDA",
+      "TJX",
+      "CMG",
+      "JPM",
+      "WFC",
+      "COST",
+      "KO",
+      "GS",
+      "ORCL",
+      "PANW",
+      "AVGO",
+      "TMUS",
+      "MO",
+      "WMT",
+      "PM"
+    ],
+    "weights": [
+      0.14628746580815755,
+      0.010000000000000005,
+      0.01,
+      0.01,
+      0.18207676940424822,
+      0.01,
+      0.01,
+      0.01,
+      0.06443833754437378,
+      0.22745707458338224,
+      0.2797403526598382,
+      0.010000000000000009,
+      0.01,
+      0.010000000000000004,
+      0.010000000000000004
+    ],
+    "in_sample_return": 0.27240435098182647,
+    "in_sample_volatility": 0.24711936460029063,
+    "in_sample_sharpe": 1.1023189195328083
+  },
+  "out_of_sample": {
+    "final_value": 151978.34220285786,
+    "total_return": 0.5197834220285786,
+    "annual_return": 0.5274670264417218,
+    "sharpe_ratio": 1.6580076195159128,
+    "max_drawdown": -0.2761268052744273
+  },
+  "quantum_info": {
+    "chip_id": "Classical_SLSQP",
+    "topology": "CPU",
+    "num_qubits": 0
+  }
+}

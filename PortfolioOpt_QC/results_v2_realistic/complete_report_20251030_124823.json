@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-10-30T12:48:34.970406",
+  "version": "2.0_realistic",
+  "configuration": {
+    "capital": 100000.0,
+    "n_assets": 15,
+    "risk_aversion": 0.5,
+    "use_quantum": false,
+    "rebalance_threshold": 0.05
+  },
+  "portfolio": {
+    "tickers": [
+      "F",
+      "ADI",
+      "BAC",
+      "CHTR",
+      "COF",
+      "BKNG",
+      "FTNT",
+      "CMG",
+      "AXP",
+      "BK",
+      "CL",
+      "AVGO",
+      "GS",
+      "COST",
+      "GIS"
+    ],
+    "weights": [
+      0.010000000000000023,
+      0.01,
+      0.01,
+      0.010000000000000014,
+      0.01,
+      0.01,
+      0.16912080642860658,
+      0.010000000000000024,
+      0.10569557413172305,
+      0.01,
+      0.01000000000000001,
+      0.39999999999999997,
+      0.20593748039818435,
+      0.01924613904148603,
+      0.01
+    ],
+    "in_sample_return": 0.2451412209368475,
+    "in_sample_volatility": 0.23262249110221592,
+    "in_sample_sharpe": 1.0538156468676572
+  },
+  "out_of_sample": {
+    "final_value": 156049.18848515872,
+    "total_return": 0.5604918848515872,
+    "annual_return": 0.5688808663309961,
+    "sharpe_ratio": 1.6283410512315932,
+    "max_drawdown": -0.29267427706788823,
+    "n_rebalances": 1,
+    "total_costs": 3078.4642825113337
+  },
+  "quantum_info": {
+    "chip_id": "Classical"
+  }
+}

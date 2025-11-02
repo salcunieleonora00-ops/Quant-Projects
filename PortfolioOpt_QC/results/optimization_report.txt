@@ -1,0 +1,42 @@
+
+================================================================================
+QUANTUM PORTFOLIO OPTIMIZATION - ANALYSIS REPORT
+================================================================================
+
+SELECTED PORTFOLIO
+--------------------------------------------------------------------------------
+Number of assets: 5
+Expected return: 32.29%
+Volatility: 13.14%
+Sharpe ratio: 2.458
+
+Selected assets:
+  DUK: Return=15.35%, Vol=17.37%
+  GE: Return=67.19%, Vol=28.60%
+  WMT: Return=29.28%, Vol=19.89%
+  JNJ: Return=7.18%, Vol=17.04%
+  GOOGL: Return=42.44%, Vol=30.96%
+
+================================================================================
+SOLUTION CONSISTENCY
+--------------------------------------------------------------------------------
+Best solution frequency: 20.2%
+Average solution overlap: 0.130
+Energy std deviation: 8.0605
+Total unique solutions: 827
+
+================================================================================
+BENCHMARK COMPARISON
+--------------------------------------------------------------------------------
+             Portfolio   Return  Volatility  Sharpe_Ratio  Diversification_Ratio      HHI  N_Assets
+Quantum (Equal-Weight) 0.322884    0.131355      2.458106               1.733743 0.200000         5
+    Equal-Weight (All) 0.397973    0.155512      2.559116               1.906013 0.066667        15
+      Minimum Variance 0.221534    0.109388      2.025216               1.896510 0.164641        14
+        Maximum Sharpe 0.475525    0.157366      3.021773               1.783157 0.162884        11
+
+================================================================================
+CONCLUSIONS
+--------------------------------------------------------------------------------
+Quantum portfolio underperforms best benchmark by 22.9%
+Solution consistency: HIGH
+================================================================================

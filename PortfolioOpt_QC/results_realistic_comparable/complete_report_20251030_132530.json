@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-10-30T13:25:37.260188",
+  "version": "2.0_COMPARABLE",
+  "configuration": {
+    "capital": 100000.0,
+    "n_assets": 15,
+    "candidate_pool": 28,
+    "risk_aversion": 0.5,
+    "use_quantum": false,
+    "num_reads": null,
+    "rebalance_threshold": 0.05,
+    "commission_bps": 5.0,
+    "slippage_bps": 5.0,
+    "spread_bps": 5.0,
+    "total_cost_bps": 15.0
+  },
+  "portfolio": {
+    "tickers": [
+      "ADBE",
+      "AMAT",
+      "AAPL",
+      "AMZN",
+      "ADI",
+      "CHTR",
+      "BKNG",
+      "FTNT",
+      "CMG",
+      "AXP",
+      "CL",
+      "BK",
+      "AVGO",
+      "COST",
+      "GIS"
+    ],
+    "weights": [
+      0.010000000000000045,
+      0.01,
+      0.010000000000000064,
+      0.01,
+      0.01000000000000001,
+      0.01,
+      0.014068633922897087,
+      0.17499184880108973,
+      0.01,
+      0.21404628122667804,
+      0.01000000000000001,
+      0.018825187873557685,
+      0.4,
+      0.08806804817577708,
+      0.010000000000000259
+    ],
+    "in_sample_return": 0.24347064435003607,
+    "in_sample_volatility": 0.23839701636447816,
+    "in_sample_sharpe": 1.0212822629365503,
+    "hhi": 0.2456462529222159,
+    "effective_n": 4.070894581553625
+  },
+  "out_of_sample": {
+    "final_value": 147725.96591873324,
+    "total_return": 0.4772596591873324,
+    "annual_return": 0.48422070926574534,
+    "sharpe_ratio": 1.4523010911992424,
+    "sortino_ratio": 2.0470751274147703,
+    "calmar_ratio": 1.7307696835641615,
+    "max_drawdown": -0.27977189216106046,
+    "win_rate": 0.5502008032128514,
+    "n_rebalances": 2,
+    "total_costs": 1900.7458966115723
+  },
+  "quantum_info": {
+    "chip_id": "Classical_SLSQP"
+  }
+}

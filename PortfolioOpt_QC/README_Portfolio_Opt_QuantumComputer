@@ -1,0 +1,156 @@
+# Quantum Portfolio Optimization: A Practical Application of D-Wave Quantum Computing
+
+## 1. Introduction
+
+D-Wave offered us the opportunity to participate in an **introductory workshop on quantum computing for optimization**.
+
+The session covered:
+
+- **Quantum Annealing:** Finding global minima by exploiting quantum tunneling and superposition.  
+- **Quantum Tunneling:** Ability of qubits to escape local minima.  
+- **QUBO Formulation:** Translating problems into **Quadratic Binary Optimization** form with variables, objective functions, and penalty constraints.
+
+During the hands-on part, we applied these concepts to simple problems such as Box-sum minimization  
+and Knapsack problem.
+
+After the workshop, D-Wave granted us **2 days of QPU access** (15 minutes computation time via personal API). We used this to implement a **full quantum portfolio optimization model**, comparing it with classical mean-variance approaches. Due to this, I used this to implement a full quantum portfolio optimization model, comparing it with classical mean-variance approaches, realizing also the QUBO(Quantum Unconstrained Binary Optimization) formulation.
+
+---
+
+## 2. Project Overview
+
+The project explores how **quantum optimization performs in realistic portfolio construction** compared to classical optimization.
+
+### Objectives
+
+- Select the optimal subset of stocks  
+- Allocate capital under realistic constraints  
+- Optimize risk/return trade-off  
+- Evaluate in-sample and out-of-sample performance
+
+### Models Developed
+
+**Model 1 – Classical Baseline (5 stocks)**  
+- Markowitz mean-variance + 12-month momentum strategy (Jegadeesh & Titman, 1993) on 5 S&P 500 stocks.  
+- Goal: validate pipeline and feasibility.
+
+**Model 2 – Classical V2.0 Comparable (15 stocks)**  
+- Universe: 15 stocks (based on "Stock Market Concentration: How Much Is Too Much?")  
+- Capital: \$100,000  
+- Rebalancing: Quarterly  
+- Constraints: Position limits 1–40%, transaction costs, fully invested, cardinality  
+- Optimizer: SLSQP
+
+**Model 3 – Quantum V2.5 Fixed (QUBO)**  
+- Same constraints as Classical Comparable  
+- Solved via D-Wave QPU  
+- Weights discretized and encoded as **binary variables**  
+- QUBO formulation includes objective and penalties for cardinality and full investment
+
+---
+
+## 3. Mathematical Formulation
+
+### Model 1 – Classical Baseline (5 stocks)
+
+**Objective:**
+$$
+\min_w f(w) = \lambda w^T \Sigma w - (1-\lambda) \mu^T w
+$$
+
+**Constraints:**
+$$
+\sum_{i=1}^{5} w_i = 1, \quad 0 \le w_i \le 1
+$$
+
+---
+
+### Model 2 – Classical V2.0 Comparable (15 stocks)
+
+**Objective:**
+$$
+\min_w f(w) = \lambda w^T \Sigma w - (1-\lambda) \mu^T w
+$$
+
+**Constraints:**
+$$
+\sum_{i=1}^{15} w_i = 1, \quad 0.01 \le w_i \le 0.40, \quad |\{ i : w_i > 0 \}| = 15
+$$
+
+---
+
+### Model 3 – Quantum V2.5 Fixed (QUBO)
+
+**Binary Weight Encoding:**
+$$
+w_i = \sum_{j=0}^{L} b_{ij} \cdot level_j, \quad b_{ij} \in \{0,1\}, \quad \sum_{j=0}^{L} b_{ij} \le 1
+$$
+
+**QUBO Objective Function:**
+$$
+\begin{aligned}
+f(x) &= \lambda x^T \Sigma x - (1-\lambda) \mu^T x \\
+&\quad + P_1 \left(\sum_i x_i - K \right)^2 \\
+&\quad + P_2 \sum_i \left( \sum_j b_{ij} -1 \right)^2 \\
+&\quad + P_3 \left( \sum_i \sum_j b_{ij} level_j - 1 \right)^2
+\end{aligned}
+$$
+
+**Where:**
+- $P_1$ = penalty for cardinality  
+- $P_2$ = one-hot encoding penalty (select one level per asset)  
+- $P_3$ = penalty for fully invested constraint  
+- $K = 15$ (number of selected assets)  
+
+---
+
+## 4. Results vs Benchmark (S\&P 500)
+
+### Classical V2.0 Comparable
+
+| Portfolio                | Initial Capital | Final Value | Total Return | Sharpe Ratio |
+|--------------------------|----------------|-------------|--------------|--------------|
+| Classical V2.0 Comparable| \$100,000      | \$147,726   | 47.73\%      | 1.289        |
+| S&P 500                  | \$100,611      | \$110,215   | 9.55\%       | 0.535        |
+
+**Comments:** Outperforms S\&P 500 in absolute and risk-adjusted returns, but with higher volatility and drawdown.
+
+---
+
+### Quantum V2.5 Fixed
+
+| Portfolio           | Initial Capital | Final Value | Total Return | Sharpe Ratio |
+|-------------------|----------------|-------------|--------------|--------------|
+| Quantum V2.5 Fixed | \$100,000      | \$151,978   | 51.98\%      | 1.427        |
+| S&P 500            | \$100,611      | \$110,215   | 9.55\%       | 0.535        |
+
+**Comments:** Outperforms S\&P 500, slightly better Sharpe and lower volatility than Classical Comparable. Demonstrates advantage of quantum annealing in exploring global minima with discrete constraints.
+
+---
+
+## 5. Technical Notes
+
+- Rebalancing: Quarterly  
+- Transaction Costs: Commission 5bps, slippage 5bps, spread 5bps  
+- Capital Gains Tax: 20\%  
+- Solver: Classical – SLSQP; Quantum – D-Wave QPU (via Ocean SDK)  
+- Weight Levels (Quantum): 0\%, 5\%, 10\%, 20\%, 40\%  
+
+---
+
+## 6. References
+
+1. Jegadeesh, N., & Titman, S. (1993). *Returns to Buying Winners and Selling Losers: Implications for Stock Market Efficiency.* Journal of Finance, 48(1), 65-91.  
+2. Markowitz, H. (1952). *Portfolio Selection.* Journal of Finance, 7(1), 77-91.  
+3. "Stock Market Concentration: How Much Is Too Much?" – Research on optimal number of stocks.  
+4. D-Wave Systems Documentation, Ocean SDK and Quantum Annealing Guide.  
+
+---
+
+## 7. Acknowledgments
+
+- D-Wave Systems – workshop & QPU access  
+- Workshop instructors – QUBO formulation guidance  
+- Jegadeesh & Titman – momentum strategy foundation  
+- Harry Markowitz – modern portfolio theory  
+

@@ -1,0 +1,4 @@
+Strategy,Method,Assets,Final Value,Total Return,Annual Return,Volatility,Sharpe,Sortino,Calmar,Max DD,Win Rate,VaR 95%,Rebalances,Total Costs,HHI,Effective N
+Quantum Portfolio,Quantum,5,"$152,747",52.75%,52.75%,31.81%,1.658,2.256,1.910,27.61%,56.2%,2.98%,1,$617,0.1897,5.27
+Classical Portfolio (Run 1),Classical,15,"$157,870",57.87%,58.74%,29.75%,1.975,2.886,2.669,22.01%,59.0%,2.28%,3,"$3,418",0.2661,3.76
+Classical Portfolio (Run 2),Classical,15,"$151,978",51.98%,52.75%,31.81%,1.658,2.256,1.910,27.61%,56.2%,2.98%,1,$617,0.1897,5.27

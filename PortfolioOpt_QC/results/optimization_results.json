@@ -1,0 +1,16 @@
+{
+  "selected_tickers": [
+    "DUK",
+    "GE",
+    "WMT",
+    "JNJ",
+    "GOOGL"
+  ],
+  "expected_return": 0.32288399661893885,
+  "volatility": 0.13135477558962522,
+  "sharpe_ratio": 2.4581062635109947,
+  "best_energy": -374.96685568602163,
+  "num_unique_solutions": 827,
+  "best_solution_frequency": 0.202,
+  "qpu_chip": "Advantage_system4.1"
+}

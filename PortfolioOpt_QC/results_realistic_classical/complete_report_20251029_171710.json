@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-10-29T17:17:22.760386",
+  "version": "2.0_realistic",
+  "configuration": {
+    "capital": 100000.0,
+    "n_assets": 15,
+    "risk_aversion": 0.5,
+    "use_quantum": false,
+    "rebalance_threshold": 0.05
+  },
+  "portfolio": {
+    "tickers": [
+      "ABT",
+      "CMCSA",
+      "CRM",
+      "BKNG",
+      "BK",
+      "AXP",
+      "CI",
+      "AMGN",
+      "CL",
+      "CAT",
+      "CMG",
+      "AVGO",
+      "CB",
+      "COST",
+      "ABBV"
+    ],
+    "weights": [
+      0.010000000000000047,
+      0.010000000000000042,
+      0.010000000000000005,
+      0.01000000000000004,
+      0.01000000000000005,
+      0.17419474503842314,
+      0.01,
+      0.010000000000000014,
+      0.01,
+      0.03163747207915907,
+      0.010000000000000056,
+      0.39999999999999997,
+      0.01,
+      0.023575883329538125,
+      0.27059189955287943
+    ],
+    "in_sample_return": 0.2297150246507888,
+    "in_sample_volatility": 0.1980614995778198,
+    "in_sample_sharpe": 1.1598166485684518
+  },
+  "out_of_sample": {
+    "final_value": 157869.9167870538,
+    "total_return": 0.578699167870538,
+    "annual_return": 0.5874078703761572,
+    "sharpe_ratio": 1.9746413310157527,
+    "max_drawdown": -0.2200656590621712,
+    "n_rebalances": 3,
+    "total_costs": 3417.78711155996
+  },
+  "quantum_info": {
+    "chip_id": "Classical"
+  }
+}

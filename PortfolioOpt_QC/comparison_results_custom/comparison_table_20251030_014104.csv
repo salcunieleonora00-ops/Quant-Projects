@@ -1,0 +1,4 @@
+Strategy,Method,N Assets,Final Value ($),Total Return (%),Annual Return (%),Volatility (%),Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max Drawdown (%),Win Rate (%),VaR 95% (%),Best Day (%),Worst Day (%),Rebalances,Total Costs ($),Costs (%),HHI,Effective N,Max Weight (%),Min Weight (%)
+Quantum Portfolio,Quantum,5,152746.72,52.75,52.75,31.81,1.658,2.256,1.91,27.61,56.220000000000006,2.98,12.93,-7.6899999999999995,1,616.59,0.617,0.1897,5.27,27.97,1.0
+Classical Portfolio (Run 1),Classical,15,157869.92,57.87,58.74,29.75,1.975,2.886,2.669,22.009999999999998,59.040000000000006,2.2800000000000002,11.65,-6.87,3,3417.79,3.42,0.2661,3.76,40.0,1.0
+Classical Portfolio (Run 2),Classical,15,151978.37,51.980000000000004,52.75,31.81,1.658,2.256,1.91,27.61,56.220000000000006,2.98,12.93,-7.6899999999999995,1,616.59,0.617,0.1897,5.27,27.97,1.0
